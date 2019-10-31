@@ -1,0 +1,23 @@
+﻿@page "/counter"
+@*@inject NavigationManager LocalNavigationManager*@
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Increment</button>
+<button class="btn btn-primary" @onclick="@DecrementCount">Decrement</button>
+<button class="btn btn-primary" @onclick="@NavigationByCode">Navigation By Code</button>
+<button class="btn btn-primary" @onclick="@NavigationByCodeBehind">Navigation By Code Behind</button>
+
+
+
+
+
+@code {
+
+    void NavigationByCode()
+    {
+        LocalNavigationManagerByCodeBehind.NavigateTo("/fetchdata");
+    }
+}
