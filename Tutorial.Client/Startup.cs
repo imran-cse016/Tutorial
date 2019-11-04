@@ -7,6 +7,7 @@ namespace Tutorial.Client
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            
         }
 
         public void Configure(IComponentsApplicationBuilder app)
