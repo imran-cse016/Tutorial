@@ -1,0 +1,25 @@
+﻿@page "/DataBinding/OneWay/1"
+
+<h3>One-way data binding</h3>
+color is : <label>@@color</label>
+number is: <label>@rnumber</label>
+product is: <label>@product</label>
+<div style="background-color: @color; padding: 50px;"></div>
+<button class="btn btn-dark" @onclick="@(e => { ToggleBackGround(e, 14); SetProduct("test"); })">Toggle background color</button>
+
+
+@code {
+    private string color = "red";
+    private int rnumber = 0;
+    private string product = "1";
+    private void ToggleBackGround(MouseEventArgs e, int randomNumber)
+    {
+        color = color == "red" ? "green" : "red";
+        rnumber = randomNumber;
+    }
+
+    private void SetProduct(string prod)
+    {
+        product = prod;
+    }
+}
